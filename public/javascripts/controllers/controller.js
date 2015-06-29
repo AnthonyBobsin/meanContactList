@@ -8,5 +8,11 @@ myApp.controller('AppController', ['$scope', '$http', function($scope, $http) {
 		$scope.contactList = response
 	})
 
-  
+  $scope.addContact = function() {
+    console.log($scope.newContact)
+    $http.post('/contactlist', $scope.newContact).success(function(response) {
+      console.log(response)
+      $scope.contactList.add(response)
+    })
+  }
 }])

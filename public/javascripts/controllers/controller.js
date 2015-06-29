@@ -41,4 +41,8 @@ myApp.controller('AppController', ['$scope', '$http', function($scope, $http) {
       $scope.newContact = response
     })
   }
+
+  $scope.deselect = function() {
+    $scope.newContact = ""
+  }
 }])

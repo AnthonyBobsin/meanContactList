@@ -7,4 +7,6 @@ myApp.controller('AppController', ['$scope', '$http', function($scope, $http) {
 		console.log("I got the data I requested")
 		$scope.contactList = response
 	})
+
+  
 }])
